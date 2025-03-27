@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: antiquewhite;
     display: flex;
@@ -10,10 +14,35 @@ body {
 }
 
 .box-container {
-    height: 250px;
-    width: 70vw;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 2fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    border: 1px solid black;
+    
+}
+
+.column {
+    display: flex;
+    width: 350px;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    border: 1px solid transparent
+
+}
+
+h2 {
+    display: inline;
+}
+
+.card {
+    width: 100%;
+    padding: var(--spacing-400, 32px);
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--spacing-400, 32px);
     border: 1px solid black;
 }
