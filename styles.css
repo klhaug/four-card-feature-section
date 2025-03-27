@@ -34,62 +34,68 @@ html {
 
     
 }
-    /* TEXT */
+body {
 
-.text-preset-1 {
-    color: var(--color-grey-500, #4D4F62);
-    font-family: Poppins;
-    font-size: 2.25rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 140%; /* 50.4px */
-    letter-spacing: 0.25px;
 }
-.text-preset-2 {
-    color: var(--color-grey-500, #4D4F62);
-    /* text-preset-2 */
-    font-family: Poppins;
-    font-size: 2.25rem;
-    font-style: normal;
-    font-weight: 275;
-    line-height: 140%; /* 50.4px */
-    letter-spacing: 0.25px;
-}
-.text-preset-3 {
-    color: var(--color-grey-500, #4D4F62);
-    /* text-preset-3 */
-    font-family: Poppins;
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 135%; /* 27px */
-}
-.text-preset-4 {
-    color: var(--color-grey-500, #4D4F62);
-    /* text-preset-4 */
-    font-family: Poppins;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; /* 21px */
-    letter-spacing: 0.104px;
-}
-.text-preset-5 {
-    color: var(--color-grey-500, #4D4F62);
-    /* text-preset-5 */
-    font-family: Poppins;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%; /* 20.8px */
-    letter-spacing: 0.09px;
-    opacity: 0.5;
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    gap: 60px;
+    padding-top: 56px;
 }
 
 header {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+    min-width: 316px;
+    width: calc(100% - 60px);
+    max-width: 350px;
+
+}
+.heading-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
+header h1 {
+    color: var(--color-grey-500, #4D4F62);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 50.4px */
+    letter-spacing: 0.25px;
+}
+
+header h2 {
+        color: var(--color-grey-500, #4D4F62);
+        text-align: center;
+        /* text-preset-2 */
+        font-family: Poppins;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 275;
+        line-height: 140%; /* 50.4px */
+        letter-spacing: 0.25px;
+}
+
+header p {
+    text-align: center;
+        color: var(--color-grey-500, #4D4F62);
+        /* text-preset-4 */
+        font-family: Poppins;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 21px */
+        letter-spacing: 0.104px;
+}
 section {
     display: flex;
     justify-content: center;
@@ -100,6 +106,7 @@ section {
 
 /* Region - CARDS */
     .card {
+        transition: scale 200ms;
         height: 250px;
         flex-direction: column;
         justify-content: flex-start;
@@ -112,6 +119,16 @@ section {
         /* Drop Shadow */
         box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.50);
     
+    }
+
+    .card:hover {
+        scale: 1.02;
+    }
+
+    .double-card-column {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-400);
     }
     /* TOP BORDER LINE */
     span {
@@ -154,4 +171,61 @@ section {
         align-self: flex-end;
     }
 
+    .card h3 {
+        color: var(--color-grey-500, #4D4F62);
+        /* text-preset-3 */
+        font-family: Poppins;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 135%; /* 27px */
+    }
+
+    .card p {
+        color: var(--color-grey-500, #4D4F62);
+        /* text-preset-5 */
+        font-family: Poppins;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 20.8px */
+        letter-spacing: 0.09px;
+        opacity: 0.5;
+    }
+
 /* endregion */
+
+
+/* MEDIAQUERIES */
+
+@media screen and (min-width: 768px) {
+    section {
+        flex-direction: column;
+    }
+
+    .double-card-column {
+        flex-direction: row;
+    }
+
+    header h1 {
+        font-size: 2.25rem ;
+    }
+    header h2 {
+        font-size: 2.25rem ;
+    }
+
+    header{
+        max-width: 540px;
+    }
+
+}
+@media screen and (min-width: 1200px) {
+    section {
+        flex-direction: row;
+    }
+
+    .double-card-column {
+        flex-direction: column;
+    }
+
+}
