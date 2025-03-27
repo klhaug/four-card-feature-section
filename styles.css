@@ -23,7 +23,8 @@ html {
     --color-orange: #FCAE4A;
 
     /* SPACING */
-
+    
+    --spacing-1600: 3.375rem;
     --spacing-500: 2.5;
     --spacing-400: 2rem;
     --spacing-300: 1.5rem;
@@ -40,9 +41,9 @@ body {
 
 main {
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     height: 100vh;
     gap: 60px;
     padding-top: 56px;
@@ -216,6 +217,10 @@ section {
 
     header{
         max-width: 540px;
+    }
+
+    main {
+        padding: var(--spacing-1600);
     }
 
 }
