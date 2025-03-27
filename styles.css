@@ -1,48 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: antiquewhite;
-    display: flex;
-    justify-content: center;
+html {
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
 }
 
-.box {
+:root {
+    /* COLORS */
 
-    border: 1px solid black;
-}
+    --color-grey-500: #4D4F62;
+    --color-grey-400: #6A7178;
+    --color-white: #fff;
+    --color-red: #EA5454;
+    --color-cyan: #44D3D2;
+    --color-blue: #549EF2;
+    --color-orange: #FCAE4A;
 
-.box-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    border: 1px solid black;
+    /* SPACING */
+
+    --spacing-500: 2.5;
+    --spacing-400: 2rem;
+    --spacing-300: 1.5rem;
+    --spacing-200: 1rem;
+    --spacing-100: 0.5rem;
+
+
+
     
 }
+    /* TEXT */
 
-.column {
+.text-preset-1 {
+    color: var(--color-grey-500, #4D4F62);
+    font-family: Poppins;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 50.4px */
+    letter-spacing: 0.25px;
+}
+.text-preset-2 {
+    color: var(--color-grey-500, #4D4F62);
+    /* text-preset-2 */
+    font-family: Poppins;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 275;
+    line-height: 140%; /* 50.4px */
+    letter-spacing: 0.25px;
+}
+.text-preset-3 {
+    color: var(--color-grey-500, #4D4F62);
+    /* text-preset-3 */
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 135%; /* 27px */
+}
+.text-preset-4 {
+    color: var(--color-grey-500, #4D4F62);
+    /* text-preset-4 */
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 21px */
+    letter-spacing: 0.104px;
+}
+.text-preset-5 {
+    color: var(--color-grey-500, #4D4F62);
+    /* text-preset-5 */
+    font-family: Poppins;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 20.8px */
+    letter-spacing: 0.09px;
+    opacity: 0.5;
+}
+
+header {
+    display: none;
+}
+
+section {
     display: flex;
-    width: 350px;
-    height: 100%;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 32px;
-    border: 1px solid transparent
-
+    gap: var(--spacing-400);
 }
 
-h2 {
-    display: inline;
-}
+/* Region - CARDS */
+    .card {
+        height: 250px;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: calc(100vw - 60px);
+        max-width: 350px;
+        min-width: 314px;
+        gap: var(--spacing-400);
+        border-radius: var(--spacing-100, 8px);
+        background: var(--color-white, #FFF);
+        /* Drop Shadow */
+        box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.50);
+    
+    }
+    /* TOP BORDER LINE */
+    span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-top-left-radius: var(--spacing-100, 8px);
+        border-top-right-radius: var(--spacing-100, 8px);
+    }
+    /* TOP BORDER COLORS */
+    .tb-cyan {
+        border-top: 4px solid var(--color-cyan);
+    }
+    .tb-red {
+        border-top: 4px solid var(--color-red);
+    }
+    .tb-orange {
+        border-top: 4px solid var(--color-orange);
+    }
+    .tb-blue {
+        border-top: 4px solid var(--color-blue);
+    }
+    .card-content-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: var(--spacing-400);
+        padding: var(--spacing-400);
+        padding-top: calc(var(--spacing-400) - 4px);
+    }
+    .card-text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    img {
+        height: 64px;
+        width: 64px;
+        align-self: flex-end;
+    }
 
-.card {
-    width: 100%;
-    padding: var(--spacing-400, 32px);
-    flex-direction: column;
-    align-items: flex-end;
-    gap: var(--spacing-400, 32px);
-    border: 1px solid black;
-}
+/* endregion */
